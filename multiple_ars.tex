@@ -128,7 +128,7 @@
             \label{fig_noise_1}
             $$ f_1(x) = sin(x) + N(\mu=0, \sigma=1) $$
         \end{figure}
-        \vspace{-8mm}
+        \vspace{-4mm}
 
         Figure \ref{fig_noise_2} shows result of multisampling method over 4 samples, significantly reducing the noise, but increasing latency.
         \begin{figure}[H]
@@ -138,7 +138,7 @@
             $$ Avg(x, t) = \frac{ \sum_{x}^{x+t-1}f_1(x) }{t} $$
             $$ f_2(x) = Avg(x,4) $$
         \end{figure}
-        \vspace{-8mm}
+        \vspace{-4mm}
 
         Figure \ref{fig_noise_3} shows equivalent noise reduction (using a second sensor signal) but with improved latency. Note that the signal is not just scaled down version of the original noise, but also shows features (relative peaks) of the second sensor averaged signal.
         \begin{figure}[H]
@@ -147,7 +147,7 @@
             \label{fig_noise_3}
             $$ f_3(x) = \frac{Avg(x_1,2) + Avg(x_2,2) }{2} $$
         \end{figure}
-        \vspace{-8mm}
+        \vspace{-4mm}
 
         Figure \ref{fig_noise_4} shows improved noise reduction by using 2 sensors given the same latency as figure \ref{fig_noise_2}.
         \begin{figure}[H]
@@ -156,7 +156,7 @@
             \label{fig_noise_4}
             $$ f_4(x) = \frac{Avg(x_1,4) + Avg(x_2,4) }{2} $$
         \end{figure}
-        \vspace{-8mm}
+        \vspace{-4mm}
 
         Figure \ref{fig_noise_5} shows further improvement of noise reduction by using 3 sensors given the same latency as figure \ref{fig_noise_2}.
         \begin{figure}[H]
@@ -165,7 +165,7 @@
             \label{fig_noise_5}
             $$ f_5(x) = \frac{Avg(x_1,4) + Avg(x_2,4) + Avg(x_3,4) }{3} $$
         \end{figure}
-        \vspace{-8mm}
+        \vspace{-4mm}
 
         The conclusion is that redundant sensors (of equal or similar characteristics) can be used to either reduce total noise more effectively within the same latency, or to achieve the same level of noise reduction but with less latency.
 
@@ -352,7 +352,7 @@
             \end{table}
 
         \subsubsection{Conclusion}
-            Redundant sensors can be used effectively to reducing zero-rate in ARS by exploiting the fact given random vectors (with signed coordinates), most of the times their average is closer to the origin or coordinates that any of the individual vectors, or in the worst cases better than at least one of them.
+            Redundant sensors can be used effectively to reduce zero-rate in ARS by exploiting the fact that for a set of given random vectors (with signed coordinates) their average is usually closer to the origin or coordinates than any of the individual vectors, or in the worst cases better than at least one of them.
 
             There are diminishing returns both when working with more axis (1D, 2D, 3D), and when adding more sensors.
 
