@@ -124,7 +124,7 @@
         Figure \ref{fig_noise_1} shows the untreated signal on a single sensor.
         \begin{figure}[H]
             \caption{Sensors=1, Samples=1, Latency=1}
-            \includegraphics[width=\linewidth]{multiple_ars/figure_noise_1.png}
+            \includegraphics[width=\linewidth]{figure_noise_1.png}
             \label{fig_noise_1}
             $$ f_1(x) = sin(x) + N(\mu=0, \sigma=1) $$
         \end{figure}
@@ -133,7 +133,7 @@
         Figure \ref{fig_noise_2} shows result of multisampling method over 4 samples, significantly reducing the noise, but increasing latency.
         \begin{figure}[H]
             \caption{Sensors=1, Samples=4, Latency=4}
-            \includegraphics[width=\linewidth]{multiple_ars/figure_noise_2.png}
+            \includegraphics[width=\linewidth]{figure_noise_2.png}
             \label{fig_noise_2}
             $$ Avg(x, t) = \frac{ \sum_{x}^{x+t-1}f_1(x) }{t} $$
             $$ f_2(x) = Avg(x,4) $$
@@ -143,7 +143,7 @@
         Figure \ref{fig_noise_3} shows equivalent noise reduction (using a second sensor signal) but with improved latency. Note that the signal is not just scaled down version of the original noise, but also shows features (relative peaks) of the second sensor averaged signal.
         \begin{figure}[H]
             \caption{Sensors=2, Samples=4, Latency=2}
-            \includegraphics[width=\linewidth]{multiple_ars/figure_noise_3.png}
+            \includegraphics[width=\linewidth]{figure_noise_3.png}
             \label{fig_noise_3}
             $$ f_3(x) = \frac{Avg(x_1,2) + Avg(x_2,2) }{2} $$
         \end{figure}
@@ -152,7 +152,7 @@
         Figure \ref{fig_noise_4} shows improved noise reduction by using 2 sensors given the same latency as figure \ref{fig_noise_2}.
         \begin{figure}[H]
             \caption{Sensors=2, Samples=8, Latency=4}
-            \includegraphics[width=\linewidth]{multiple_ars/figure_noise_4.png}
+            \includegraphics[width=\linewidth]{figure_noise_4.png}
             \label{fig_noise_4}
             $$ f_4(x) = \frac{Avg(x_1,4) + Avg(x_2,4) }{2} $$
         \end{figure}
@@ -161,7 +161,7 @@
         Figure \ref{fig_noise_5} shows further improvement of noise reduction by using 3 sensors given the same latency as figure \ref{fig_noise_2}.
         \begin{figure}[H]
             \caption{Sensors=3, Samples=12, Latency=4}
-            \includegraphics[width=\linewidth]{multiple_ars/figure_noise_5.png}
+            \includegraphics[width=\linewidth]{figure_noise_5.png}
             \label{fig_noise_5}
             $$ f_5(x) = \frac{Avg(x_1,4) + Avg(x_2,4) + Avg(x_3,4) }{3} $$
         \end{figure}
@@ -193,7 +193,7 @@
 
         \begin{figure}[H]
             \caption{Actual input}
-            \includegraphics[width=\linewidth]{multiple_ars/figure_scale_1.png}
+            \includegraphics[width=\linewidth]{figure_scale_1.png}
             \label{fig_scale_1}
         \end{figure}
         \vspace{-8mm}
@@ -201,7 +201,7 @@
         Sensor $A$ is able to fit the full amplitude of the input, but noise is greater than in sensor $B$.
         \begin{figure}[H]
             \caption{Sensor A, scale=250}
-            \includegraphics[width=\linewidth]{multiple_ars/figure_scale_2.png}
+            \includegraphics[width=\linewidth]{figure_scale_2.png}
             \label{fig_scale_2}
         \end{figure}
         \vspace{-8mm}
@@ -209,7 +209,7 @@
         Sensor $B$ noise is relatively smaller, but the input signal makes it to saturate after a certain point.
         \begin{figure}[H]
             \caption{Sensor B, scale=125}
-            \includegraphics[width=\linewidth]{multiple_ars/figure_scale_3.png}
+            \includegraphics[width=\linewidth]{figure_scale_3.png}
             \label{fig_scale_3}
         \end{figure}
         \vspace{-8mm}
@@ -217,7 +217,7 @@
         Using the method described above the last figure shows how values of $B$ (with less noise) are used while the signal does not saturate it. But when sensor $B$ starts saturating it switches to the values of sensor $A$, which is able to capture the full amplitude of the real input.
         \begin{figure}[H]
             \caption{Dynamic switch sensors A and B}
-            \includegraphics[width=\linewidth]{multiple_ars/figure_scale_4.png}
+            \includegraphics[width=\linewidth]{figure_scale_4.png}
             \label{fig_scale_4}
         \end{figure}
         \vspace{-8mm}
@@ -245,7 +245,7 @@
                 \begin{center}
                     \caption{Probability-weighted drift}
                     \label{fig_rate_1a}
-                    \includegraphics[width=0.8\linewidth]{multiple_ars/figure_drift_1a.png}
+                    \includegraphics[width=0.8\linewidth]{figure_drift_1a.png}
                 \end{center}
             \end{figure}
             $$ f_1(x) = x $$
@@ -258,7 +258,7 @@
                 \begin{center}
                     \caption{Axis=1, Sensors=1}
                     \label{fig_zero_11}
-                    \includegraphics[width=0.8\linewidth]{multiple_ars/figure_drift_1b.png}
+                    \includegraphics[width=0.8\linewidth]{figure_drift_1b.png}
                 \end{center}
             \end{figure}
             \vspace{-8mm}
@@ -272,7 +272,7 @@
                 \begin{center}
                     \caption{Axis=1, Sensors=2}
                     \label{fig_zero_12}
-                    \includegraphics[width=0.8\linewidth]{multiple_ars/figure_drift_2.png}
+                    \includegraphics[width=0.8\linewidth]{figure_drift_2.png}
                 \end{center}
             \end{figure}
             \vspace{-8mm}
@@ -301,7 +301,7 @@
                 \begin{center}
                     \caption{Axis=2, Sensors=1}
                     \label{fig_zero_21}
-                    \includegraphics[width=0.8\linewidth]{multiple_ars/figure_drift_3.png}
+                    \includegraphics[width=0.8\linewidth]{figure_drift_3.png}
                 \end{center}
             \end{figure}
             \vspace{-8mm}
@@ -313,7 +313,7 @@
                 \begin{center}
                     \caption{Axis=2, Sensors=2}
                     \label{fig_zero_22}
-                    \includegraphics[width=0.8\linewidth]{multiple_ars/figure_drift_4.png}
+                    \includegraphics[width=0.8\linewidth]{figure_drift_4.png}
                 \end{center}
             \end{figure}
             \vspace{-8mm}
