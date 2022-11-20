@@ -89,6 +89,7 @@
         \end{itemize}
 
     \subsubsection{Scale}
+    \label{problem.scale}
         Angular rate sensors have a limit in the turn rate they can report on. These are also measured in maximum DPS until they saturate its data channel. For commercially available ARSs this attribute can be configured, usually in predefined steps from 125 DPS to 4000 DPS, referred as ranges or scales.
 
         There are tradeoffs depending in which scale to choose, smaller scales have better granularity (lower DPS per Least Significant Bit), better noise-signal ratio, and smaller zero-rate ratio, but can only report on slower turns. On the contrary, bigger scales have worse granularity, worse noise-signal ratio, an greater zero-rate, but they can report on faster turns.
@@ -173,7 +174,7 @@
         The benefits of parallelism regarding latency does scale linearly with number of redundant sensors as $latency/n$ (there are no diminishing returns of using more than 2 sensors); while benefits regarding noise reduction only increase at a $1/n$ rate, so there are diminishing returns when adding more sensors.
 
     \subsection{Scale}
-        While changing the scale dynamically with a single sensor is problematic (see section \ref{problem.noise}), it is possible to obtain the same multi-scale benefits with multiple sensors without these tradeoffs. By using multiple sensors, each one permanently adjusted to a different scale, then using the output of the most suitable sensor (the one with the smaller scale able to fit the input without saturate) a result with lower noise and lower zero-rate is obtained when the input is small, but without limitations in range when the input is greater.
+        While changing the scale dynamically with a single sensor is problematic (see section \ref{problem.scale}), it is possible to obtain the same multi-scale benefits with multiple sensors without these tradeoffs. By using multiple sensors, each one permanently adjusted to a different scale, then using the output of the most suitable sensor (the one with the smaller scale able to fit the input without saturate) a result with lower noise and lower zero-rate is obtained when the input is small, but without limitations in range when the input is greater.
 
         Given a system with multiple sensors $ S_n $, each sensor with a range $R_n$, and sorted from greater to smaller range, the final output can be defined as:
 
@@ -334,7 +335,7 @@
             $$ \approx 0.0982 $$
 
             \pagebreak
-            So for 2 axis, used as 2-dimensional vectors, averaging the values of a 2nd sensor, it reduces the zero-drift to approximately $ \sim 2/3 $, varying depending on the characteristics of the sensor (the probability curve),
+            So for 2 axis, used as 2-dimensional vectors, averaging the values of a 2nd sensor, it reduces the zero-drift to approximately $ \sim 2/3 $, varying depending on the characteristics of the sensor (the probability curve).
 
             This solution achieves better results when sigma is higher (when the drift is worse more often), while the scale used for the PDF is irrelevant.
             \begin{table}[H]
